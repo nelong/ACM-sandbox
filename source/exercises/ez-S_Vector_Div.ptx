@@ -1,0 +1,209 @@
+<exercises>
+<introduction>
+  <p>
+    There are several additional exercises involving the calculation and interpretation of the divergence of a vector field in <xref ref="S_Vector_Curl"/>. In those problems, the output of divergence and curl are compared and contrasted.
+  </p>
+</introduction>
+<!-- rough div calc -->
+<exercise label="Library__FortLewis__Calc3__20-1-Idea-of-divergence__HGM4-20-1-04-Divergence__pg">
+  <webwork source="Library/FortLewis/Calc3/20-1-Idea-of-divergence/HGM4-20-1-04-Divergence.pg"/>
+</exercise>
+<!-- div calc and sensemaking -->
+<exercise label="Library__Michigan__Chap20Sec1__Q01__pg">
+  <webwork source="Library/Michigan/Chap20Sec1/Q01.pg"/>
+</exercise>
+<!-- div(grad) calc -->
+<exercise label="Library__FortLewis__Calc3__20-1-Idea-of-divergence__HGM4-20-1-22-Divergence__pg">
+  <webwork source="Library/FortLewis/Calc3/20-1-Idea-of-divergence/HGM4-20-1-22-Divergence.pg"/>
+</exercise>
+
+<!-- div calc -->
+<exercise label="Library__Michigan__Chap20Sec1__Q07__pg" xml:id="div6">
+    <webwork source="Library/Michigan/Chap20Sec1/Q07.pg"/>
+</exercise> 
+<!-- cross product into div calc -->
+<exercise label="Library__Michigan__Chap20Sec1__Q09__pg" xml:id="div7">
+    <webwork source="Library/Michigan/Chap20Sec1/Q09.pg"/>
+</exercise> 
+
+
+<!-- +-0 div from vf plot -->
+<exercise label="Library__FortLewis__Calc3__20-1-Idea-of-divergence__HGM4-20-1-09-Divergence__pg" xml:id="div10">
+    <webwork source="Library/FortLewis/Calc3/20-1-Idea-of-divergence/HGM4-20-1-09-Divergence.pg"/>
+</exercise> 
+<!-- estimate flux out of small sphere -->
+<exercise label="Library__FortLewis__Calc3__20-1-Idea-of-divergence__HGM4-20-1-15-Divergence__pg" xml:id="div11">
+    <webwork source="Library/FortLewis/Calc3/20-1-Idea-of-divergence/HGM4-20-1-15-Divergence.pg"/>
+</exercise> 
+
+  <exercise>
+        <statement>
+            <p>
+                <ol>
+                    <li>
+                        Let <m>\vF=\langle{F_1,F_2,F_3}\rangle</m> and let
+                    <md>
+                        \vG = (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z})\vi- (\frac{\partial F_3}{\partial x}-\frac{\partial F_1}{\partial z})\vj + (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y})\vk
+                    </md>
+                    Show that <m>\divg(\vG)=\vec{0}</m>. 
+                    </li>
+                    <li>
+                        <p>Vector fields
+                          with a zero divergence everywhere in their domain are called <term>divergence-free</term> or <term>incompressible</term> vector fields. Which of the following vector fields are divergence-free?
+                        <ol>
+                            <li><m>\vF=\langle{-y,z,x}\rangle</m></li>
+                            <li><m>\vF=\langle{\cos(yz),3xe^{z-x},6(x+y+z)^3}\rangle</m></li>
+                            <li><m>\vF=\langle{4xyz,y^2z,yz^2}\rangle</m></li>
+                            <li><m>\vF=\nabla f</m> where <m>f</m> is a scalar function of <m>x</m>, <m>y</m>, and <m>z</m></li>
+                        </ol>
+			</p>
+                    </li>
+                    <li>
+                        Let <m>\vF_1=\langle{3(x-z)^2,2\cos(x)+3yz+y,-(z-1)^2+e^{xy}}\rangle</m>. Calculate the divergence of <m>\vF_1</m> and give a point where <m>\divg(\vF_1)=0</m>.
+                    </li>
+                    <li>
+                        Is <m>\vF_1</m> a divergence free vector field?
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <answer>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <md>
+                    <mrow>  \divg(\vG)=0 </mrow>
+                  </md> 
+                </p>
+              </li>
+              <li>
+                <p>
+                  <ol>
+                    <li><m>\divg(\vF) = 0+0+0 =0 </m>, thus the vector field is divergence-free.</li>
+                    <li><m>\divg(\vF) = 0+0,18(x+y+z)^2\neq 0 </m>, thus this vector field is NOT divergence-free</li>
+                    <li><m>\divg(\vF) = 4yz+2yz+2yz \neq 0 </m>, thus this vector field is NOT divergence-free</li>
+                    <li><m>\divg(\vF) = \frac{\partial}{\partial x}(\frac{\partial f}{\partial x})+ \frac{\partial}{\partial y}(\frac{\partial f}{\partial y}) + \frac{\partial}{\partial z}(\frac{\partial f}{\partial z}) = \frac{\partial^2 f}{\partial x^2}+ \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} </m> which is not always zero. For instance, if <m>f(x,y,z)=x^2</m>, then <m>\div(\vF) = \frac{\partial^2 f}{\partial x^2}+ \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} =2+0+0</m>. Thus vector fields of the form <m>\vF=\nabla f</m> are not necessarily divergence-free. </li>
+                  </ol>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>\vF_1=\langle{3(x-z)^2,2\cos(x)+3yz+y,-(z-1)^2+e^{xy}}\rangle</m>, then <m>\divg(\vF_1)= 6(x-z)+3z-2(z-1)=6x-5z+1</m>. Thus <m>\divg(\vF_1) (-1,4,-1)=0</m>, but in general <m>\vF_1</m> is not divergence-free.
+                </p>
+              </li>
+            <li>
+                The vector field <m>\vF_1</m> is not a divergence free vector field.
+            </li>
+            </ol>
+          </p>
+          </answer>
+          <solution>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    <md>
+                      <mrow>  \divg(\vG) = \amp \frac{\partial}{\partial x}(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z})- \frac{\partial}{\partial y}(\frac{\partial F_3}{\partial x}-\frac{\partial F_1}{\partial z}) + \frac{\partial}{\partial z}(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y})</mrow>
+                      <mrow> = \amp (\frac{\partial^2 F_3}{\partial y \partial x}-\frac{\partial^2 F_2}{\partial z \partial x})- (\frac{\partial^2 F_3}{\partial x \partial y}-\frac{\partial^2 F_1}{\partial z \partial y}) + (\frac{\partial^2 F_2}{\partial x \partial z}-\frac{\partial^2 F_1}{\partial y \partial z})</mrow>
+                      <mrow> = \amp (\frac{\partial^2 F_3}{\partial y \partial x}-\frac{\partial^2 F_3}{\partial x \partial y})
+                        + (\frac{\partial^2 F_2}{\partial x \partial z}-\frac{\partial^2 F_2}{\partial z \partial x})
+                        + (\frac{\partial^2 F_1}{\partial z \partial y}-\frac{\partial^2 F_1}{\partial y \partial z})=0 </mrow>
+                    </md> 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <ol>
+                      <li><m>\divg(\vF) = 0+0+0 =0 </m>, thus the vector field is divergence-free.</li>
+                      <li><m>\divg(\vF) = 0+0,18(x+y+z)^2\neq 0 </m>, thus this vector field is NOT divergence-free</li>
+                      <li><m>\divg(\vF) = 4yz+2yz+2yz \neq 0 </m>, thus this vector field is NOT divergence-free</li>
+                      <li><m>\divg(\vF) = \frac{\partial}{\partial x}(\frac{\partial f}{\partial x})+ \frac{\partial}{\partial y}(\frac{\partial f}{\partial y}) + \frac{\partial}{\partial z}(\frac{\partial f}{\partial z}) = \frac{\partial^2 f}{\partial x^2}+ \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} </m> which is not always zero. For instance, if <m>f(x,y,z)=x^2</m>, then <m>\divg(\vF) = \frac{\partial^2 f}{\partial x^2}+ \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} =2+0+0</m>. Thus vector fields of the form <m>\vF=\nabla f</m> are not necessarily divergence-free. </li>
+                    </ol>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    If <m>\vF_1=\langle{3(x-z)^2,2\cos(x)+3yz+y,-(z-1)^2+e^{xy}}\rangle</m>, then <m>\divg(\vF_1)= 6(x-z)+3z-2(z-1)=6x-5z+1</m>. Thus <m>\divg(\vF_1) (-1,4,-1)=0</m>, but in general <m>\vF_1</m> is not divergence-free.
+                  </p>
+                </li>
+              <li>
+                  The vector field <m>\vF_1</m> is not a divergence free vector field.
+              </li>
+              </ol>
+            </p>
+          </solution>
+    </exercise>
+
+  <exercise>
+    <introduction>
+      <p>
+        In this exercise, we will look at how different forms of component function's dependence on our variables will change the divergence of the vector field. For each of the vector fields given below, decide if the divergence of the vector field must be zero and write a sentence or two to justify your decision. 
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <md>\vF=f(x)\vi+g(y)\vk+\vj+h(z)\vj</md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This vector field will not necessarily have zero divergence. 
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <md>\vG=f(x)\vi+f(y)\vk+\vj+f(z)\vj</md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This vector field will not necessarily have zero divergence. 
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <md>\vH=f(y,z)\vi+g(x,z)\vk+\vj+h(x,y)\vj</md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This vector field will necessarily have a zero divergence.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <md>\vA=g(x,y)\vi-g(x,y)\vk+\vj+h(z)\vj</md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This vector field will not necessarily have a zero divergence. 
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <md>\vB=g(x,y)\vi-g(y,x)\vk+\vj+h(z)\vj</md>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This vector field will have a zero divergence
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+
+
+  
+</exercises>

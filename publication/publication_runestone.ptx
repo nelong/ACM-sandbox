@@ -1,0 +1,30 @@
+<publication>
+  <source>
+    <version include="book online"/>
+    <directories generated="../generated-assets" />
+  </source>
+  <html>
+    <css theme="salem" palette="ice-fire" />
+    <knowl example="no" />
+    <platform host="runestone" />
+  <webwork divisional="dynamic"/>
+    
+  </html>
+  <latex sides="two">
+  </latex>
+  <common>
+    <!-- List Chapters and Sections in sidebar Table of Contents -->
+    <tableofcontents level="2" />
+    <exercise-inline />
+    <exercise-divisional statement="yes" hint="yes" answer="no" solution="no"/>
+    <exercise-project statement="yes" hint="yes" answer="no" solution="no" />
+  </common>
+  <numbering>
+    <divisions chapter-start="9" />
+    <projects distinct="yes" />
+  </numbering>
+  <webwork server="https://webwork-ptx.aimath.org"
+	   course="mitchkeller-dev" password="anonymous"
+	   user="anonymous" />
+  
+</publication>

@@ -1,0 +1,29 @@
+<publication>
+  <source>
+    <directories generated="../generated-assets"
+		 />
+    <version include="" />
+  </source>
+  <latex sides="two" print="yes" font-size="10" pageref="no">
+    <page>
+      <geometry>letterpaper,tmargin=.5in,bmargin=.3in,hmargin=.75in,includeheadfoot</geometry>
+    </page>
+  </latex>
+  <html>
+    <baseurl href="https://activecalculus.org/multi/" />
+  </html>
+  <common>
+    <!-- List Chapters and Sections in sidebar Table of Contents -->
+    <tableofcontents level="2" />
+    <exercise-divisional statement="no" hint="no" answer="no" solution="no"/>
+    <exercise-project statement="yes" hint="no" answer="no" solution="no" />
+  </common>
+  <numbering>
+    <divisions chapter-start="9" />
+    <projects distinct="yes" />
+  </numbering>
+  <webwork server="https://webwork-ptx.aimath.org"
+  course="mitchkeller-dev" password="anonymous"
+  user="anonymous"/>
+
+</publication>

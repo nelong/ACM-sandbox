@@ -1,0 +1,94 @@
+<!-- **********************************************************************-->
+<!-- Copyright 2013-2026                                                   -->
+<!-- Mitch Keller and Nick Long                                                      -->
+<!--                                                                       -->
+<!-- This file is part of Active Calculus Multivariable.                   -->
+<!--                                                                       -->
+<!-- Permission is granted to copy, distribute and/or modify this document -->
+<!-- under the terms of the Creative Commons BY-NC-SA license.  The work   -->
+<!-- may be used for free by any party so long as attribution is given to  -->
+<!-- the author(s), the work and its derivatives are used in the spirit of -->
+<!-- "share and share alike"; no party may sell this work or any of its    -->
+<!-- derivatives for profit.  All trademarks are the registered marks of   -->
+<!-- their respective owners.                                              -->
+<!-- **********************************************************************-->
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Test1">
+  <title>Chapter 1 </title>
+  
+  <section xml:id="sec-test1">
+    <title>Title goes here</title>
+    <p>
+      Here is some text. I will put some graphics below
+    </p>
+    <figure xml:id="coor-planes">
+      <caption>The coordinate planes in three dimensions</caption>
+      <interactive label="interactive-coor-plane" platform="sage" width="125%" aspect="1:1">
+        <description><p>An interactive plot that shows planes that contain the x and y axes for the first option, the x and z axes for the second option, and the y and z axes for the third option.</p>
+      </description>
+      <slate surface="sage">
+          from sage.plot.plot3d.plot3d import axes
+          var('t,s')
+          d=4
+          @interact
+          def coordplanes(xyp=checkbox(False,'Show xy-plane'),xzp=checkbox(True,'Show xz-plane'),yzp=checkbox(False,'Show yz-plane')):
+            plot12=axes(3.5,2,color="black")+text3d("x",(4,0,0),fontsize=30)+text3d("y",(0,4,0),fontsize=30)+text3d("z",(0,0,4),fontsize=30)
+            if(xyp):
+              plot12+=parametric_plot3d((s,t,0),(s,-3,3),(t,-3,3),color="green",opacity=.25,frame=False,mesh=True,plot_points=3)
+              plot12+=text3d("xy-plane",(d,-d,0.5),fontsize=25,color="green")
+            if(xzp):
+              plot12+=parametric_plot3d((s,0,t),(s,-3,3),(t,-3,3),color="blue",opacity=.25,frame=False,mesh=True,plot_points=3)
+              plot12+=text3d("xz-plane",(-d,0,d),fontsize=25,color="blue")
+            if(yzp):
+              plot12+=parametric_plot3d((0,t,s),(s,-3,3),(t,-3,3),color="red",opacity=.25,frame=False,mesh=True,plot_points=3)
+              plot12+=text3d("yz-plane",(0,-d,d),fontsize=25,color="red")
+            show(plot12,aspect_ratio=1,viewpoint=[[-0.23,-0.5945,-0.7705],146.8],camera_position=[12.3011,13.494,5.4476])
+        </slate>
+      </interactive> 
+    </figure>
+
+    <sidebyside widths="32% 32% 32%" valign="middle" margins="1%">
+      <figure xml:id="coorplane1">
+        <caption>A plot of coordinate planes</caption>
+        <image>
+          <sageplot variant="3d" label="things">
+            from sage.plot.plot3d.plot3d import axes
+            var('t,s')
+            d=4
+            plot12=axes(3.5,2,color="black")+text3d("x",(4,0,0),fontsize=30)+text3d("y",(0,4,0),fontsize=30)+text3d("z",(0,0,4),fontsize=30)
+            plot12+=parametric_plot3d((s,t,0),(s,-3,3),(t,-3,3),color="green",opacity=.25,frame=False,mesh=True,plot_points=3)
+            plot12+=text3d("xy-plane",(d,-d,0.5),fontsize=25,color="green",viewpoint=[[-0.23,-0.5945,-0.7705],146.8],camera_position=[10.9581,10.2191,5.0001])
+            plot12
+          </sageplot>
+        </image>
+      </figure>
+      <figure xml:id="coorplane2">
+        <caption>A plot of coordinate planes</caption>
+        <image>
+          <sageplot variant="3d" label="things2">
+            from sage.plot.plot3d.plot3d import axes
+            var('t,s')
+            d=4
+            plot12=axes(3.5,2,color="black")+text3d("x",(4,0,0),fontsize=30)+text3d("y",(0,4,0),fontsize=30)+text3d("z",(0,0,4),fontsize=30)
+            plot12+=parametric_plot3d((s,0,t),(s,-3,3),(t,-3,3),color="blue",opacity=.25,frame=False,mesh=True,plot_points=3)
+            plot12+=text3d("xz-plane",(-d,0,d),fontsize=25,color="blue",viewpoint=[[-0.23,-0.5945,-0.7705],146.8],camera_position=[11.0009,11.5672,3.8365])
+            plot12
+          </sageplot>
+        </image>
+      </figure>
+      <figure xml:id="coorplane3">
+        <caption>A plot of coordinate planes</caption>
+        <image>
+          <sageplot variant="3d" label="things3">
+            from sage.plot.plot3d.plot3d import axes
+            var('t,s')
+            d=4
+            plot12=axes(3.5,2,color="black")+text3d("x",(4,0,0),fontsize=30)+text3d("y",(0,4,0),fontsize=30)+text3d("z",(0,0,4),fontsize=30)
+            plot12+=parametric_plot3d((0,t,s),(s,-3,3),(t,-3,3),color="red",opacity=.25,frame=False,mesh=True,plot_points=3)
+            plot12+=text3d("yz-plane",(0,-d,d),fontsize=25,color="red",viewpoint=[[-0.23,-0.5945,-0.7705],146.8],camera_position=[10.4818,11.8444,3.8911])
+            plot12
+          </sageplot>
+        </image>
+      </figure>
+      </sidebyside>
+  </section>
+</chapter>

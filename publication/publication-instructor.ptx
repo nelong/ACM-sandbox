@@ -1,0 +1,32 @@
+<publication>
+  <source webwork-problems="../generated-assets/webwork/webwork-representations.xml">
+    <version include="instructor online book"/>
+    <directories generated="../generated-assets" />
+  </source>
+  <html>
+    <analytics google-gst="G-QJKN634F7R" />
+    <calculator model="geogebra-graphing"/>
+    <css theme="salem" palette="ice-fire" />
+    <knowl example="no" />
+    <webwork divisional="dynamic" />
+    <baseurl href="https://activecalculus.org/multi/" />
+  </html>
+  <latex sides="two" font-size="10" pageref="no">
+  </latex>
+  <common>
+    <!-- List Chapters and Sections in sidebar Table of Contents -->
+    <tableofcontents level="2" />
+    <exercise-inline />
+    <exercise-divisional statement="yes" hint="yes" answer="no" solution="no"/>
+    <exercise-project statement="yes" hint="yes" answer="no" solution="no" />
+    <worksheet margin="13mm" />
+  </common>
+  <numbering>
+    <divisions chapter-start="9" />
+    <projects distinct="yes" />
+  </numbering>
+    <webwork server="https://webwork-ptx.aimath.org"
+	   course="anonymous" password="anonymous"
+	   user="anonymous"/>
+
+</publication>
