@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "Title goes here",
-  "body": " Title goes here  Here is some text. I will put some graphics below   The coordinate planes in three dimensions    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   Plots of the three coordinate planes     Temporary placeholder       Temporary placeholder       Temporary placeholder       "
+  "body": " Title goes here  Here is some text. I will put some graphics below   The coordinate planes in three dimensions    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   Plots of the three coordinate planes     Temporary placeholder       Temporary placeholder       Temporary placeholder        Plots of the three coordinate planes     Temporary placeholder       Temporary placeholder       Temporary placeholder        This is just a PreFigure image set to 100% width   A graph    graph={1:[3],2:[3,4,6],3:[4,5],4:[5],5:[6]}  labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}           \\mathbf{G}         A graph    graph={1:[3],2:[3,4,6],3:[4,5],4:[5],5:[6]}  labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}           \\mathbf{G}       A graph    graph={1:[3],2:[3,4,6],3:[4,5],4:[5],5:[6]}  labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}           \\mathbf{G}       A graph    graph={1:[3],2:[3,4,6],3:[4,5],4:[5],5:[6]}  labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}           \\mathbf{G}         Temporary placeholder     "
 },
 {
   "id": "coor-planes",
@@ -26,6 +26,24 @@ var ptx_lunr_docs = [
   "number": "9.1.2",
   "title": "",
   "body": " Plots of the three coordinate planes     Temporary placeholder       Temporary placeholder       Temporary placeholder      "
+},
+{
+  "id": "coorplane2",
+  "level": "2",
+  "url": "sec-test1.html#coorplane2",
+  "type": "Figure",
+  "number": "9.1.3",
+  "title": "",
+  "body": " Plots of the three coordinate planes     Temporary placeholder       Temporary placeholder       Temporary placeholder      "
+},
+{
+  "id": "prefig-demo",
+  "level": "2",
+  "url": "sec-test1.html#prefig-demo",
+  "type": "Figure",
+  "number": "9.1.4",
+  "title": "",
+  "body": " This is just a PreFigure image set to 100% width   A graph    graph={1:[3],2:[3,4,6],3:[4,5],4:[5],5:[6]}  labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}           \\mathbf{G}      "
 },
 {
   "id": "sec-test2",
