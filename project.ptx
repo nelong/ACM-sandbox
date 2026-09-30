@@ -2,8 +2,8 @@
 <project ptx-version="2">
   <!-- For the conversion to ptx-version="2", I have only tested HTML and instructor targets initially (20250702). MTK -->
   <targets>
-    <target name="html" format="html" source="main.ptx" xsl="acmv-html.xsl" deploy-dir="multi" />
-    <target name="instructor" format="html" source="main.ptx" xsl="acmv-html.xsl" publication="publication-instructor.ptx" deploy-dir="multi-instructor" />
+    <target name="html" format="html" source="main.ptx" xsl="acmv-html.xsl" />
+    <target name="instructor" format="html" source="main.ptx" xsl="acmv-html.xsl" publication="publication-instructor.ptx"/>
     <target name="hosted" format="html" source="main.ptx" xsl="acmv-html.xsl" output-dir="/home/activec2/public_html/multi" />
     <target name="runestone" format="html" source="main.ptx" xsl="acmv-html.xsl" publication="publication_runestone.ptx" platform="runestone" />
     <target name="latex" format="latex" source="main.ptx" />

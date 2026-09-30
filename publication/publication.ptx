@@ -1,7 +1,7 @@
 <publication>
   <source>
     <version include="book online"/>
-    <directories generated="../generated-assets" external="../assets" />
+    <directories generated="../generated-assets"/>
 
   </source>
   <html>
