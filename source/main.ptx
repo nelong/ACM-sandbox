@@ -178,7 +178,7 @@
 
     <xi:include href="testingground1.ptx"/> 
     <xi:include href="testingground2.ptx"/> 
-
+    <xi:include href="testingground3.ptx"/> 
     <backmatter component="book">
       
       <index>

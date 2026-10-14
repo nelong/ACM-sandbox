@@ -20,6 +20,211 @@
     <p>
       Here is some text. I will put some graphics below
     </p>
+    <exploration xml:id="PA-2D-coord">
+      <introduction>
+        <p>
+          In this Preview Activity, we will recall some ideas about measurements and important ideas in two dimensional space. 
+        </p>
+      </introduction>
+      <task workspace="0.25in">
+        <statement>
+          <p>
+            What are the coordinates of the point drawn in <xref ref="coord2d-PA"/>? Draw segments from the point <m>P</m> to the vertical and horizontal axes to demonstrate the measurements of the coordinates. 
+          </p>
+          <figure xml:id="coord2d-PA">
+            <caption>A 2D plot with point <m>P</m> labeled</caption>
+            <image width="40%">
+              <description><p>A two-dimensional plot with a point labeled <m>P</m> that is <m>3</m> units right of the vertical axis and <m>1</m> unit above the horizontal axis</p></description>
+              <sageplot label="img-coord2d-PA1">
+                plot4=point((3,1),color="black",size=20,axes=True,axes_labels=["$x$","$y$"],gridlines=True)
+                plot4+=text("$P$",(3.3,1.3),color="black",fontsize=20,xmin=-2,xmax=4,ymin=-2,ymax=4,aspect_ratio=1)
+                plot4            
+              </sageplot>
+            </image>
+          </figure>
+        </statement>
+        <answer>
+          <p>
+            <m>(3,1)</m>
+          </p>
+        </answer>
+        <solution>
+          <p>
+            <m>(3,1)</m>
+          </p>
+        </solution>
+      </task>
+      <task workspace="0.0in">
+        <statement>
+          <p>
+            On the plot below, graph and label the following points: <m>P_1=(0,1)</m>, <m>P_2=(1,0)</m>, <m>P_3=(2,-3)</m>, <m>P_4=(3,-2)</m>, <m>P_5=(-3,2)</m>.
+          </p>
+          <figure xml:id="coord2d-PA2">
+            <caption>Two-dimensional axes for plotting points</caption>
+            <image width="40%">
+              <description><p>A blank two-dimensional grid where each coordinate varies from <m>-4</m> to <m>4</m></p></description>
+              <sageplot label="img-coord2d-PA2">
+                plot5=point((0,0),color="black",size=0,axes=true,axes_labels=["$x$","$y$"],gridlines=True,xmin=-4,xmax=4,ymin=-4,ymax=4,aspect_ratio=1)
+                plot5        
+              </sageplot>
+            </image>
+          </figure>
+        </statement>
+        <solution>
+          <p>
+            <image width="60%">
+              <sageplot>
+                plot99=point((0,1),color="black",size=20,gridlines=True,aspect_ratio=1,axes=true,axes_labels=["$x$","$y$"],xmin=-4,xmax=4,ymin=-4,ymax=4)+text("$P_1$",(0.25,1.25),fontsize=20,color="black")
+                plot99+=point((1,0),color="black",size=20)+text("$P_2$",(1.25,0.25),fontsize=20,color="black")
+                plot99+=point((2,-3),color="black",size=20)+text("$P_3$",(2.25,-3.25),fontsize=20,color="black")
+                plot99+=point((2,-3),color="black",size=20)+text("$P_3$",(2.25,-3.25),fontsize=20,color="black")
+                plot99+=point((3,-2),color="black",size=20)+text("$P_4$",(3.25,-2.25),fontsize=20,color="black")
+                plot99+=point((-3,2),color="black",size=20)+text("$P_5$",(-3.25,2.25),fontsize=20,color="black")
+                plot99                  
+              </sageplot>
+            </image>
+          </p>
+        </solution>
+      </task>
+      <task workspace="0.5in">
+        <statement>
+          <p>
+            Give the coordinates of four points on the horizontal axis. What aspect do all of the points on the horizontal axis have in common? Use this idea to write an equation for the horizontal axis.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            All points on the horizontal axis have a second coordinate of <m>0</m>, so any points of the form <m>(a,0)</m> will work. Thus the equation for the horizontal axis is <m>y=0</m>.
+          </p>
+        </solution>
+      </task>
+      <task workspace="0.0in">
+        <statement>
+          <p>
+            On the axes below, draw a graph of each of the following equations: <m>x=1</m>, <m>y=-2</m>, and <m>-x=y</m>
+          </p>
+          <figure xml:id="coord2d-PA3">
+            <caption>Two-dimensional axes for plotting equations</caption>
+            <image width="40%">
+              <description><p>A blank two-dimensional grid where each coordinate varies from <m>-4</m> to <m>4</m></p></description>
+              <sageplot label="img-coord2d-PA3">
+                plot5=point((0,0),color="black",size=0,axes=true,axes_labels=["$x$","$y$"],gridlines=True,xmin=-4,xmax=4,ymin=-4,ymax=4,aspect_ratio=1)
+                plot5  
+              </sageplot>
+            </image>
+          </figure>
+        </statement>
+        <solution>
+          <image width="60%">
+            <sageplot>
+              var('t')
+              plot9=parametric_plot((1,t),(t,-4,4),color="green",gridlines=True,aspect_ratio=1,axes=true,axes_labels=["$x$","$y$"],xmin=-4,xmax=4,ymin=-4,ymax=4)
+              plot9+=text("$x=1$",(1.75,1.75),color="green",fontsize=20)
+              plot9+=parametric_plot((t,-2),(t,-4,4),color="red")
+              plot9+=text("$y=-2$",(-1.75,-1.75),color="red",fontsize=20)
+              plot9+=parametric_plot((t,-t),(t,-4,4),color="blue")
+              plot9+=text("$-x=y$",(-2.75,1.75),color="blue",fontsize=20)
+              plot9                 
+            </sageplot>
+          </image>
+        </solution>
+      </task>
+      <task xml:id="PA-distance1" workspace="1.0in">
+        <statement>
+          <p>
+            Draw a plot of the points <m>(-1,2)</m> and <m>(7,-4)</m>. On your plot, draw the line segment that measures the distance between the given points and the segments that measure the horizontal and vertical changes. Your plotted segments should make a right triangle. 
+          </p>
+        </statement>
+        <solution>
+          <image width="60%">
+            <sageplot>
+              var('t')
+              plot9=line([(-1,2),(7,-4)],color="black",gridlines=True,aspect_ratio=1,axes=true,axes_labels=["$x$","$y$"])
+              plot9+=parametric_plot((t,2),(t,-1,7),color="red")
+              plot9+=parametric_plot((7,t),(t,-4,2),color="blue")
+              plot9+=point([(-1,2),(7,-4)],color="black",size=20)
+              plot9                  
+            </sageplot>
+          </image>
+        </solution>
+      </task>
+      <task xml:id="PA-distance2" workspace="1.0in">
+        <statement>
+          <p>
+            Find the length of each of line segments in the plot that is your answer to <xref ref="PA-distance1"/>. Explain how the right triangle idea you drew can be generalized to find the distance between two points <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The length of the vertical segment, shown in blue, is 6. The length of the horizontal segment, shown in red, is 8. The length of the diagonal segment, shown in black, is 10 and can be calculated with a pythagorean theorem like argument.
+          </p>
+          <p>
+            In general the length of the vertical segment between <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> will be <m>|y_2 - y_1|</m>. The length of the horizontal segment between <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> will be <m>|x_2 - x_1|</m>. The length of the diagonal segment between <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> will be <m>\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</m>.
+          </p>
+        </solution>
+      </task>
+    </exploration>
+
+<figure xml:id="F-9-1-left-right-hand">
+    <sidebyside widths="50% 50%">
+      <figure xml:id="fig-coord-sys-left-hand">
+        <caption>A left hand system</caption>
+        <image source="fig_9_1_left_hand">
+          <description>
+            <p>Three mutually perpendicular line segments labeled <m>x</m>, <m>y</m>, and <m>z</m>. They are arranged so that the segment labeled <m>z</m> points up, the segment labeled <m>x</m> points to the right, and the segment labeled <m>y</m> is coming out of the page.
+            </p>
+          </description>
+        </image>
+      </figure>
+      <figure xml:id="fig-coord-sys-right-hand">
+        <caption>A right hand system</caption>
+        <image source="fig_9_1_right_hand">
+          <description>
+            <p>Three mutually perpendicular line segments labeled <m>x</m>, <m>y</m>, and <m>z</m>. They are arranged so that the segment labeled <m>z</m> points up, the segment labeled <m>y</m> points to the right, and the segment labeled <m>x</m> is coming out of the page.
+            </p>
+          </description>
+        </image>
+      </figure>
+    </sidebyside>
+  </figure>
+
+<figure xml:id="F-9-1-left-right-hand2">
+    <sidebyside widths="50% 50%">
+      <image source="fig_9_1_left_hand">
+        <description>
+          <p>Three mutually perpendicular line segments labeled <m>x</m>, <m>y</m>, and <m>z</m>. They are arranged so that the segment labeled <m>z</m> points up, the segment labeled <m>x</m> points to the right, and the segment labeled <m>y</m> is coming out of the page.
+          </p>
+        </description>
+      </image>
+      <image source="fig_9_1_right_hand">
+        <description>
+          <p>Three mutually perpendicular line segments labeled <m>x</m>, <m>y</m>, and <m>z</m>. They are arranged so that the segment labeled <m>z</m> points up, the segment labeled <m>y</m> points to the right, and the segment labeled <m>x</m> is coming out of the page.
+          </p>
+        </description>
+      </image>
+    </sidebyside>
+    <caption>A left handed system (left figure) and a right handed system (right figure)</caption>
+  </figure>
+
+  <figure xml:id="coord2d-measurement">
+      <caption>A plot with the 2D coordinate measurements labeled</caption>
+      <image width="55%" xml:id="img-coord2d-measurement">
+        <description><p>A plot with the two-dimensional coordinate measurements labeled for a point in the first quadrant and a point in the fourth quadrant</p></description>
+        <sageplot>
+          var('t')
+          plot11=point((3,1),color="black",size=60,axes=True,zorder=5,axes_labels=["$x$","$y$"],ticks=[[],[]],fontsize=25)
+          plot11+=line([(0,1),(3,1)],color="red",thickness=3)+line([(3,0),(3,1)],color="blue",thickness=3)
+          plot11+=text("$a$",(1.5,1.3),color="red",fontsize=30)+text("$b$",(3.3,0.5),color="blue",fontsize=30)
+          plot11+=text("$P=(a,b)$",(3.3,1.3),color="black",fontsize=30)+text("$Q=(c,d)$",(2.3,-2.3),color="black",fontsize=30)
+          plot11+=point((2,-2),color="black",size=60,zorder=5)
+          plot11+=line([(0,-2),(2,-2)],color="red",thickness=3)+line([(2,0),(2,-2)],color="blue",thickness=3)
+          plot11+=text("$c$",(1,-1.7),color="red",fontsize=30)+text("$d$",(2.3,-1),color="blue",fontsize=30,xmin=-1,xmax=4.5,ymin=-2,ymax=2.5,aspect_ratio=1)
+          plot11.axes_width(3)
+          plot11
+        </sageplot>
+      </image>
+    </figure>
+
     <figure xml:id="coor-planes">
       <caption>The coordinate planes in three dimensions</caption>
       <interactive label="interactive-coor-plane" platform="sage" width="97%" aspect="1:1.24">
@@ -45,19 +250,127 @@
         </slate>
       </interactive> 
     </figure>
+
+
+    <figure xml:id="octants">
+       <caption>A plot of the eight octants </caption>
+       <image>
+        <description>
+          <p>
+            A plot with the plane through the x and y axes shown in green, the plane through the x and z axes in blue, and the plane through the y and z axes shown in red. Additionally, in the direction of points with positive x, y, and z coordinates, the first octant is labeled. An option to show labels for the second through eight octants shown moving counterclockwise around the z-axis. 
+          </p>
+        </description>
+        <sageplot variant='3d' label='interactive-octants'>
+          from sage.plot.plot3d.plot3d import axes
+          var('t,s')
+          plot3=axes(3.5,2,color="black")+text3d("x",(3.75,0,0),fontsize=30)+text3d("y",(0,3.75,0),fontsize=30)+text3d("z",(0,0,3.75),fontsize=30)
+          plot3+=parametric_plot3d((s,t,0),(s,-3,3),(t,-3,3),color="green",opacity=.25,frame=False,mesh=True,plot_points=2)
+          plot3+=parametric_plot3d((0,t,s),(s,-3,3),(t,-3,3),color="red",opacity=.25,frame=False,mesh=True,plot_points=2)
+          plot3+=parametric_plot3d((s,0,t),(s,-3,3),(t,-3,3),color="blue",opacity=.25,frame=False,mesh=True,plot_points=2)
+          d=2
+          plot3+=text3d("First Octant",(2,2,2),fontsize=25,aspect_ratio=1,viewpoint=[[-0.2656,-0.6008,-0.754],143.12],camera_position=[11.3891,10.3947,3.7861])
+          names=["2nd","3rd", "4th","5th","6th","7th","8th"]
+          locations=[(-d,d,d),(-d,-d,d),(d,-d,d),(d,d,-d),(-d,d,-d),(-d,-d,-d),(d,-d,-d)]
+          for i in range(len(names)):
+              plot3+=text3d(names[i],locations[i],fontsize=20,color='gray')
+          plot3
+        </sageplot>
+       </image>
+    </figure>
+
+
+
+    <figure xml:id="point-in3d">
+      <caption>A plot of the point <m>(1,-2,3)</m></caption>
+      <interactive label="interactive-point-in3d" platform="sage" width="100%" aspect="1:1.25">
+        <description><p>A plot with perpendicular arrows labeled x, y, and z. A point is labeled P with coordinates (1,-2,3) and a vertical green segment from the point to the xy-plane. A red segment from the intersection of the green segment with the xy-plane and at the y-axis is shown and labeled with 1. A blue segment from the intersection of the green segment with the xy-plane and the x-axis is shown and labeled with a -2.</p></description>
+        <slate surface="sage">
+          from sage.plot.plot3d.plot3d import axes
+          var('t,s')
+          @interact
+          def pointin3d(supports=checkbox(True, label='Show Segments'),coordplanes=checkbox(False,label='Show Coordinate Planes')):
+            plot14=axes(4.25,2,color="black",frame=False,aspect_ratio=1)+text3d("x",(4.5,0,0),fontsize=30)+text3d("y",(0,4.5,0),fontsize=30)+text3d("z",(0,0,4.5),fontsize=30)
+            plot14+=point3d((1,-2,3),size=50,color="black")
+            plot14+=text3d("P=(1,-2,3)",(2.25,-3.25,3.25),color="black",fontsize=25)
+            if(supports):
+              plot14+=parametric_plot3d((t,-2,0),(t,0,1),thickness=3,color="red")+parametric_plot3d((1,-t,0),(t,0,2),color="blue",thickness=3)
+              plot14+=parametric_plot3d((1,-2,t),(t,0,3),color="green",thickness=3)
+              plot14+=line([(0,0,0),(0,-3,0)],color="black",style="-")
+              plot14+=text3d("-2",(1.5,-1,0),color="blue",fontsize=25)
+              plot14+=text3d("1",(0.5,-1.5,0),color="red",fontsize=25)
+              plot14+=text3d("3",(1.25,-2.25,1.5),color="green",fontsize=25)
+            if(coordplanes):
+              plot14+=parametric_plot3d((s,t,0),(s,-4,4),(t,-4,4),color="green",opacity=.25,frame=False,mesh=True,plot_points=3)
+              plot14+=parametric_plot3d((0,t,s),(s,-4,4),(t,-4,4),color="red",opacity=.25,frame=False,mesh=True,plot_points=3)
+              plot14+=parametric_plot3d((s,0,t),(s,-4,4),(t,-4,4),color="blue",opacity=.25,frame=False,mesh=True,plot_points=3)
+              plot14+=parametric_plot3d((t,-2,3),(t,0,1),thickness=3,color="red")
+              plot14+=parametric_plot3d((1,-t,3),(t,0,2),color="blue",thickness=3)
+              plot14+=parametric_plot3d((1,-2,t),(t,0,3),color="green",thickness=3)
+              plot14+=text3d("-2",(1.5,-1,3),color="blue",fontsize=25)
+              plot14+=text3d("1",(0.5,-1.5,3),color="red",fontsize=25)
+              plot14+=text3d("3",(1.25,-2.25,1.5),color="green",fontsize=25)
+            show(plot14)
+        </slate>
+      </interactive>
+    </figure>
+
+    <figure xml:id="point-in3dasdf">
+      <sidebyside>
+        <image>
+          <description><p>A plot with perpendicular arrows labeled x, y, and z. A point is labeled P with coordinates (1,-2,3) and a vertical green segment from the point to the xy-plane. A red segment from the intersection of the green segment with the xy-plane and at the y-axis is shown and labeled with 1. A blue segment from the intersection of the green segment with the xy-plane and the x-axis is shown and labeled with a -2.</p></description>
+          <sageplot variant="3d" label="point3d-supports">
+            from sage.plot.plot3d.plot3d import axes
+            var('t,s')
+            plot14=axes(3.5,2,color="black",frame=False,aspect_ratio=1)+text3d("x",(4,0,0),fontsize=30)+text3d("y",(0,4,0),fontsize=30)+text3d("z",(0,0,4),fontsize=30)
+            plot14+=point3d((1,-2,3),size=50,color="black")
+            plot14+=text3d("P=(1,-2,3)",(2.25,-3.25,3.25),color="black",fontsize=25)
+            plot14+=parametric_plot3d((t,-2,0),(t,0,1),thickness=3,color="red")+parametric_plot3d((1,-t,0),(t,0,2),color="blue",thickness=3)
+            plot14+=parametric_plot3d((1,-2,t),(t,0,3),color="green",thickness=3)
+            plot14+=line([(0,0,0),(0,-3,0)],color="black",style="-")
+            plot14+=text3d("-2",(1.5,-1,0),color="blue",fontsize=25)
+            plot14+=text3d("1",(0.5,-1.5,0),color="red",fontsize=25)
+            plot14+=text3d("3",(1.25,-2.25,1.5),color="green",fontsize=25,viewpoint=[[-0.1881,-0.4978,-0.8467],144.52],camera_position=[6.4253,5.8609,5.8282])
+            plot14
+          </sageplot>
+        </image>
+        <image>
+          <description><p>A plot with perpendicular arrows labeled x, y, and z. A point is labeled P with coordinates (1,-2,3) and a vertical green segment from the point to the xy-plane. A red segment from the intersection of the green segment with the xy-plane and at the y-axis is shown and labeled with 1. A blue segment from the intersection of the green segment with the xy-plane and the x-axis is shown and labeled with a -2.</p></description>
+          <sageplot variant="3d" label="point3d-coordplanes">
+            from sage.plot.plot3d.plot3d import axes
+            var('t,s')
+            plot14=axes(4.25,2,color="black",frame=False,aspect_ratio=1)+text3d("x",(4.5,0,0),fontsize=30)+text3d("y",(0,4.5,0),fontsize=30)+text3d("z",(0,0,4.5),fontsize=30)
+            plot14+=point3d((1,-2,3),size=60,color="black")
+            plot14+=text3d("P=(1,-2,3)",(2.25,-3.75,3.25),color="black",fontsize=25)
+            plot14+=parametric_plot3d((s,t,0),(s,-4,4),(t,-4,4),color="green",opacity=.25,frame=False,mesh=True,plot_points=3)
+            plot14+=parametric_plot3d((0,t,s),(s,-4,4),(t,-4,4),color="red",opacity=.25,frame=False,mesh=True,plot_points=3)
+            plot14+=parametric_plot3d((s,0,t),(s,-4,4),(t,-4,4),color="blue",opacity=.25,frame=False,mesh=True,plot_points=3)
+            plot14+=parametric_plot3d((t,-2,3),(t,0,1),thickness=3,color="red")
+            plot14+=parametric_plot3d((1,-t,3),(t,0,2),color="blue",thickness=3)
+            plot14+=parametric_plot3d((1,-2,t),(t,0,3),color="green",thickness=3)
+            plot14+=text3d("-2",(1.5,-1,2.75),color="blue",fontsize=25)
+            plot14+=text3d("1",(0.5,-1.5,3.5),color="red",fontsize=25)
+            plot14+=text3d("3",(1.25,-2.25,1.5),color="green",fontsize=25,viewpoint=[[-0.4007,-0.4767,-0.7824],113.33],camera_position=[13.4605,2.0255,6.9743])
+            plot14
+          </sageplot>
+        </image>
+      </sidebyside>
+    </figure>
+
+    <image source="./LLframes.gif"/>
+
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
       <figure xml:id="coorplane1">
         <caption>Plots of the three coordinate planes</caption>
-    <sidebyside widths="32% 32% 32%" valign="middle" margins="1%">
+        <sidebyside widths="32% 32% 32%" valign="middle" margins="1%">
         <image>
-        <description>
-        <p>
-          Temporary placeholder
-        </p>
-        </description>
-          <sageplot variant="3d" label="things">
+          <description>
+          <p>
+            A three dimensional plot with the plane containing the x and y axes shown in green.
+          </p>
+          </description>
+          <sageplot variant="3d" label="xy-plane">
             from sage.plot.plot3d.plot3d import axes
             var('t,s')
             d=4
@@ -68,12 +381,12 @@
           </sageplot>
         </image>
         <image>
-                <description>
-        <p>
-          Temporary placeholder
-        </p>
-        </description>
-          <sageplot variant="3d" label="things2">
+          <description>
+            <p>
+              A three dimensional plot with the plane containing the x and z axes shown in blue.
+            </p>
+          </description>
+          <sageplot variant="3d" label="xz-plane">
             from sage.plot.plot3d.plot3d import axes
             var('t,s')
             d=4
@@ -84,12 +397,12 @@
           </sageplot>
         </image>
         <image>
-                <description>
-        <p>
-          Temporary placeholder
-        </p>
-        </description>
-          <sageplot variant="3d" label="things3">
+          <description>
+          <p>
+            A three dimensional plot with the plane containing the y and z axes shown in red.
+          </p>
+          </description>
+          <sageplot variant="3d" label="yz-plane">
             from sage.plot.plot3d.plot3d import axes
             var('t,s')
             d=4
@@ -99,7 +412,6 @@
             plot12
           </sageplot>
         </image>
-      
       </sidebyside>
       </figure>
   </section>
